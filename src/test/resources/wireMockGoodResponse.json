@@ -1,0 +1,10 @@
+{
+  "request": {
+    "url": "/value",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"res\":\"this is the result\"}"
+  }
+}

@@ -18,8 +18,6 @@
 package guru.springframework.brewery.web.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.data.domain.PageImpl;
@@ -45,7 +43,7 @@ public class BeerPagedList extends PageImpl<BeerDto> {
         super(content, PageRequest.of(number, size), totalElements);
     }
 
-    public BeerPagedList(@JsonProperty("content") List<BeerDto> content, Pageable pageable, @JsonProperty("total") long total) {
+    public BeerPagedList(List<BeerDto> content, Pageable pageable, long total) {
         super(content, pageable, total);
     }
 

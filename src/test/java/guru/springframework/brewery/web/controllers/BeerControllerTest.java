@@ -93,7 +93,7 @@ class BeerControllerTest {
 
         @BeforeEach
         void setUp() {
-            beerDto1 = BeerDto.builder().id(UUID.randomUUID()).version(1).beerName("Agila").beerStyle(BeerStyleEnum.PORTER).price(new BigDecimal("13.99")).quantityOnHand(3).upc(323456789012L).createdDate(OffsetDateTime.now()).lastModifiedDate(OffsetDateTime.now()).build();
+            beerDto1 = BeerDto.builder().id(UUID.randomUUID()).version(1).beerName("Aguila").beerStyle(BeerStyleEnum.PORTER).price(new BigDecimal("13.99")).quantityOnHand(3).upc(323456789012L).createdDate(OffsetDateTime.now()).lastModifiedDate(OffsetDateTime.now()).build();
             beers = new BeerPagedList(List.of(beerDto, beerDto1), PageRequest.of(1, 1), 2);
             given(beerService.listBeers(captorName.capture(), captorStyle.capture(), captorPage.capture())).willReturn(beers);
         }
